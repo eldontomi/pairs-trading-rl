@@ -29,7 +29,6 @@ import rl_load_data
 import rl_constants
 from log_helper import LogHelper
 
-tf.enable_eager_execution()
 
 ########################## functions ##############################
 
@@ -631,7 +630,7 @@ def main_global_setup(config, filter_pairs=None):
         all_pairs_slices, all_pairs_df, trading_period = rl_load_data.load_data(filter_pairs=filter_pairs)
     elif config.load_which_data == "energy":
         all_pairs_slices, all_pairs_df, trading_period = rl_load_data.load_data(
-            dataset_folder_path='.data',
+            dataset_folder_path='data',
             raw_files_path_pattern="data/*.csv",
             filter_pairs=filter_pairs)
     elif config.load_which_data == "other":

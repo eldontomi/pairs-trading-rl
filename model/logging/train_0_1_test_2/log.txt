@@ -1,0 +1,186 @@
+2023-12-10 12:23:45,225 INFO - log_helper - Finished configuring logger
+2023-12-10 12:23:45,250 INFO - __main__ - Hello World!
+2023-12-10 12:23:45,250 INFO - __main__ - Namespace(batch_size=300, batches_per_print=50, gamma=0.0005, h_dim=150, job_name='train_0_1_test_2', layer1_out_num=50, load_which_data='tech', lr=0.0005, num_of_epoch=80, num_rnn_layers=1, rand_action_prob=0.0, reg=1e-05, run_mode='train', test_indices=[2], train_indices=[0, 1])
+2023-12-10 12:23:45,250 INFO - __main__ - config.train_indices = [0, 1]
+2023-12-10 12:23:45,250 INFO - __main__ - config.test_indices = [2]
+2023-12-10 12:23:45,250 INFO - __main__ - num_of_batch = 0
+2023-12-10 12:23:45,250 INFO - rl_load_data - raw csv files loaded from data/*.csv
+2023-12-10 12:23:45,251 INFO - rl_load_data - Total number of pair slices: 5
+2023-12-10 12:23:45,251 INFO - rl_load_data - Total number of pair slices for period 0: 5
+2023-12-10 12:23:45,251 INFO - rl_load_data - Total number of pair slices for period 1: 5
+2023-12-10 12:23:45,251 INFO - rl_load_data - Total number of pair slices for period 2: 5
+2023-12-10 12:23:45,251 INFO - rl_load_data - Total number of pair slices for period 3: 5
+2023-12-10 12:23:45,252 CRITICAL - log_helper - Unhandled exception
+Traceback (most recent call last):
+  File "repomodel/rl_train.py", line 765, in <module>
+    main_global_setup(config, filter_pairs=filter_pairs)
+  File "repomodel/rl_train.py", line 630, in main_global_setup
+    all_pairs_slices, all_pairs_df, trading_period = rl_load_data.load_data(filter_pairs=filter_pairs)
+  File "/Users/tomas/Documents/GitHub/pairs-trading-rl/repomodel/rl_load_data.py", line 79, in load_data
+    all_pairs_df[s] = pd.read_csv(join(dataset_folder_path, s+".csv"))
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/bra_5_625-0.csv'
+2023-12-10 12:28:45,969 INFO - log_helper - Finished configuring logger
+2023-12-10 12:28:45,987 INFO - __main__ - Hello World!
+2023-12-10 12:28:45,987 INFO - __main__ - Namespace(batch_size=300, batches_per_print=50, gamma=0.0005, h_dim=150, job_name='train_0_1_test_2', layer1_out_num=50, load_which_data='tech', lr=0.0005, num_of_epoch=80, num_rnn_layers=1, rand_action_prob=0.0, reg=1e-05, run_mode='train', test_indices=[2], train_indices=[0, 1])
+2023-12-10 12:28:45,987 INFO - __main__ - config.train_indices = [0, 1]
+2023-12-10 12:28:45,987 INFO - __main__ - config.test_indices = [2]
+2023-12-10 12:28:45,987 INFO - __main__ - num_of_batch = 0
+2023-12-10 12:28:45,988 INFO - rl_load_data - raw csv files loaded from data/*.csv
+2023-12-10 12:28:45,988 INFO - rl_load_data - Total number of pair slices: 5
+2023-12-10 12:28:45,988 INFO - rl_load_data - Total number of pair slices for period 0: 5
+2023-12-10 12:28:45,988 INFO - rl_load_data - Total number of pair slices for period 1: 5
+2023-12-10 12:28:45,988 INFO - rl_load_data - Total number of pair slices for period 2: 5
+2023-12-10 12:28:45,988 INFO - rl_load_data - Total number of pair slices for period 3: 5
+2023-12-10 12:28:45,989 CRITICAL - log_helper - Unhandled exception
+Traceback (most recent call last):
+  File "repomodel/rl_train.py", line 765, in <module>
+    main_global_setup(config, filter_pairs=filter_pairs)
+  File "repomodel/rl_train.py", line 630, in main_global_setup
+    all_pairs_slices, all_pairs_df, trading_period = rl_load_data.load_data(filter_pairs=filter_pairs)
+  File "/Users/tomas/Documents/GitHub/pairs-trading-rl/repomodel/rl_load_data.py", line 79, in load_data
+    all_pairs_df[s] = pd.read_csv(join(dataset_folder_path, s+".csv"))
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/bra_5_625-0.csv'
+2023-12-10 12:29:15,129 INFO - log_helper - Finished configuring logger
+2023-12-10 12:29:15,147 INFO - __main__ - Hello World!
+2023-12-10 12:29:15,147 INFO - __main__ - Namespace(batch_size=300, batches_per_print=50, gamma=0.0005, h_dim=150, job_name='train_0_1_test_2', layer1_out_num=50, load_which_data='tech', lr=0.0005, num_of_epoch=80, num_rnn_layers=1, rand_action_prob=0.0, reg=1e-05, run_mode='train', test_indices=[2], train_indices=[0, 1])
+2023-12-10 12:29:15,147 INFO - __main__ - config.train_indices = [0, 1]
+2023-12-10 12:29:15,147 INFO - __main__ - config.test_indices = [2]
+2023-12-10 12:29:15,147 INFO - __main__ - num_of_batch = 0
+2023-12-10 12:29:15,147 INFO - rl_load_data - raw csv files loaded from data/*.csv
+2023-12-10 12:29:15,147 INFO - rl_load_data - Total number of pair slices: 3
+2023-12-10 12:29:15,147 INFO - rl_load_data - Total number of pair slices for period 0: 3
+2023-12-10 12:29:15,147 INFO - rl_load_data - Total number of pair slices for period 1: 3
+2023-12-10 12:29:15,147 INFO - rl_load_data - Total number of pair slices for period 2: 3
+2023-12-10 12:29:15,147 INFO - rl_load_data - Total number of pair slices for period 3: 3
+2023-12-10 12:29:15,148 CRITICAL - log_helper - Unhandled exception
+Traceback (most recent call last):
+  File "repomodel/rl_train.py", line 765, in <module>
+    main_global_setup(config, filter_pairs=filter_pairs)
+  File "repomodel/rl_train.py", line 630, in main_global_setup
+    all_pairs_slices, all_pairs_df, trading_period = rl_load_data.load_data(filter_pairs=filter_pairs)
+  File "/Users/tomas/Documents/GitHub/pairs-trading-rl/repomodel/rl_load_data.py", line 79, in load_data
+    all_pairs_df[s] = pd.read_csv(join(dataset_folder_path, s+".csv"))
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/processbonds-0.csv'
+2023-12-10 12:29:46,976 INFO - log_helper - Finished configuring logger
+2023-12-10 12:29:46,993 INFO - __main__ - Hello World!
+2023-12-10 12:29:46,993 INFO - __main__ - Namespace(batch_size=300, batches_per_print=50, gamma=0.0005, h_dim=150, job_name='train_0_1_test_2', layer1_out_num=50, load_which_data='tech', lr=0.0005, num_of_epoch=80, num_rnn_layers=1, rand_action_prob=0.0, reg=1e-05, run_mode='train', test_indices=[2], train_indices=[0, 1])
+2023-12-10 12:29:46,993 INFO - __main__ - config.train_indices = [0, 1]
+2023-12-10 12:29:46,993 INFO - __main__ - config.test_indices = [2]
+2023-12-10 12:29:46,993 INFO - __main__ - num_of_batch = 0
+2023-12-10 12:29:46,993 INFO - rl_load_data - raw csv files loaded from data/*.csv
+2023-12-10 12:29:46,994 INFO - rl_load_data - Total number of pair slices: 2
+2023-12-10 12:29:46,994 INFO - rl_load_data - Total number of pair slices for period 0: 2
+2023-12-10 12:29:46,994 INFO - rl_load_data - Total number of pair slices for period 1: 2
+2023-12-10 12:29:46,994 INFO - rl_load_data - Total number of pair slices for period 2: 2
+2023-12-10 12:29:46,994 INFO - rl_load_data - Total number of pair slices for period 3: 2
+2023-12-10 12:29:46,994 CRITICAL - log_helper - Unhandled exception
+Traceback (most recent call last):
+  File "repomodel/rl_train.py", line 765, in <module>
+    main_global_setup(config, filter_pairs=filter_pairs)
+  File "repomodel/rl_train.py", line 630, in main_global_setup
+    all_pairs_slices, all_pairs_df, trading_period = rl_load_data.load_data(filter_pairs=filter_pairs)
+  File "/Users/tomas/Documents/GitHub/pairs-trading-rl/repomodel/rl_load_data.py", line 79, in load_data
+    all_pairs_df[s] = pd.read_csv(join(dataset_folder_path, s+".csv"))
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/processed_bra_5_625-0.csv'
+2023-12-10 12:40:29,781 INFO - log_helper - Finished configuring logger
+2023-12-10 12:40:29,805 INFO - __main__ - Hello World!
+2023-12-10 12:40:29,805 INFO - __main__ - Namespace(batch_size=300, batches_per_print=50, gamma=0.0005, h_dim=150, job_name='train_0_1_test_2', layer1_out_num=50, load_which_data='tech', lr=0.0005, num_of_epoch=80, num_rnn_layers=1, rand_action_prob=0.0, reg=1e-05, run_mode='train', test_indices=[2], train_indices=[0, 1])
+2023-12-10 12:40:29,805 INFO - __main__ - config.train_indices = [0, 1]
+2023-12-10 12:40:29,805 INFO - __main__ - config.test_indices = [2]
+2023-12-10 12:40:29,805 INFO - __main__ - num_of_batch = 0
+2023-12-10 12:40:29,805 INFO - rl_load_data - raw csv files loaded from data/*.csv
+2023-12-10 12:40:29,805 INFO - rl_load_data - Total number of pair slices: 2
+2023-12-10 12:40:29,805 INFO - rl_load_data - Total number of pair slices for period 0: 2
+2023-12-10 12:40:29,805 INFO - rl_load_data - Total number of pair slices for period 1: 2
+2023-12-10 12:40:29,805 INFO - rl_load_data - Total number of pair slices for period 2: 2
+2023-12-10 12:40:29,805 INFO - rl_load_data - Total number of pair slices for period 3: 2
+2023-12-10 12:40:29,806 CRITICAL - log_helper - Unhandled exception
+Traceback (most recent call last):
+  File "repomodel/rl_train.py", line 765, in <module>
+    main_global_setup(config, filter_pairs=filter_pairs)
+  File "repomodel/rl_train.py", line 630, in main_global_setup
+    all_pairs_slices, all_pairs_df, trading_period = rl_load_data.load_data(filter_pairs=filter_pairs)
+  File "/Users/tomas/Documents/GitHub/pairs-trading-rl/repomodel/rl_load_data.py", line 79, in load_data
+    all_pairs_df[s] = pd.read_csv(join(dataset_folder_path, s+".csv"))
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/output_bra_5_625-0.csv'
+2023-12-10 12:45:12,502 INFO - log_helper - Finished configuring logger
+2023-12-10 12:45:12,526 INFO - __main__ - Hello World!
+2023-12-10 12:45:12,526 INFO - __main__ - Namespace(batch_size=300, batches_per_print=50, gamma=0.0005, h_dim=150, job_name='train_0_1_test_2', layer1_out_num=50, load_which_data='tech', lr=0.0005, num_of_epoch=80, num_rnn_layers=1, rand_action_prob=0.0, reg=1e-05, run_mode='train', test_indices=[2], train_indices=[0, 1])
+2023-12-10 12:45:12,526 INFO - __main__ - config.train_indices = [0, 1]
+2023-12-10 12:45:12,526 INFO - __main__ - config.test_indices = [2]
+2023-12-10 12:45:12,526 INFO - __main__ - num_of_batch = 0
+2023-12-10 12:45:12,526 INFO - rl_load_data - raw csv files loaded from data/*.csv
+2023-12-10 12:45:12,526 INFO - rl_load_data - Total number of pair slices: 4
+2023-12-10 12:45:12,526 INFO - rl_load_data - Total number of pair slices for period 0: 4
+2023-12-10 12:45:12,526 INFO - rl_load_data - Total number of pair slices for period 1: 4
+2023-12-10 12:45:12,526 INFO - rl_load_data - Total number of pair slices for period 2: 4
+2023-12-10 12:45:12,527 INFO - rl_load_data - Total number of pair slices for period 3: 4
+2023-12-10 12:45:12,527 CRITICAL - log_helper - Unhandled exception
+Traceback (most recent call last):
+  File "repomodel/rl_train.py", line 765, in <module>
+    main_global_setup(config, filter_pairs=filter_pairs)
+  File "repomodel/rl_train.py", line 630, in main_global_setup
+    all_pairs_slices, all_pairs_df, trading_period = rl_load_data.load_data(filter_pairs=filter_pairs)
+  File "/Users/tomas/Documents/GitHub/pairs-trading-rl/repomodel/rl_load_data.py", line 79, in load_data
+    all_pairs_df[s] = pd.read_csv(join(dataset_folder_path, s+".csv"))
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/Users/tomas/anaconda3/envs/pair/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'data/bra_5_625 2-0.csv'

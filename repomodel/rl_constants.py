@@ -1,4 +1,4 @@
-num_of_pair = 6670
+num_of_pair = 1
 num_of_period = 4
 
 # 0 is no position. 1 is long the spread. 2 is short the spread.

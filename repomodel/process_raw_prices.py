@@ -131,25 +131,11 @@ def generate_pairs_data(raw_files_path_pattern,
                         points_per_cut=[252,500+52], training_period=52):
     min_size = sum(points_per_cut)
 
-    nyse_csv_paths = sorted(glob.glob(raw_files_path_pattern))
-    _logger.info("Collected %d stocks in raw data." % len(nyse_csv_paths))
+    # read the csv file as dataframe
+    df = pd.read_csv(path)
+    df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
 
-    data = {}
-    N_STOCKS_TAKEN = 0
-
-    for path in nyse_csv_paths:
-        filename_without_ext = get_filename_without_ext(path)
-
-        # read the csv file as dataframe
-        df = pd.read_csv(path)
-        df['date'] = pd.to_datetime(df['date'], format='%Y-%m-%d')
-
-        # if price history is long enough, we take it
-        if len(df) >= min_size:
-            data[filename_without_ext] = df
-            N_STOCKS_TAKEN += 1
-    _logger.info("Collected %d stocks with at least %d data points." % (N_STOCKS_TAKEN, min_size))
-
+   
     stocks = list(data.keys())
     TOTAL_NUM_OF_PAIRS = len(stocks) * (len(stocks)-1) // 2
     i = 1
